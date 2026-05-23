@@ -1,13 +1,12 @@
-const val SUN_WETHER = true
-const val OPEN_TURP = true
-const val AIR_HUMIDITY = 20
-const val WINTER = "зима"
+const val IS_WEATHER_SUNNY = true
+const val IS_AWNING_OPEN = true
+const val FAVORABLE_AIR_HUMIDITY = 20
+const val WINTER_SEASON = "зима"
 fun main() {
-    val sunWetherNow = true
-    val openTrupNow = true
+    val sunWeatherNow = true
+    val isAwningOpenNow = true
     val airHumidityNow = 20
     val season = "зима"
-    println("Благоприятные ли условия сейчас для роста бобовых?" +
-            "${sunWetherNow == SUN_WETHER && openTrupNow == OPEN_TURP &&
-                    airHumidityNow == AIR_HUMIDITY && season != WINTER}")
+    val result = sunWeatherNow && isAwningOpenNow && airHumidityNow == FAVORABLE_AIR_HUMIDITY && season != WINTER_SEASON
+    println("Благоприятные ли условия сейчас для роста бобовых? $result")
 }
