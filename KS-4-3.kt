@@ -4,11 +4,11 @@ const val FAVORABLE_AIR_HUMIDITY = 20
 const val WINTER_SEASON = "зима"
 
 fun main() {
-    val sunWeatherNow = true
-    val isAwningOpenNow = true
-    val airHumidityNow = 20
+    val isSunWeather = true
+    val isAwningOpen = true
+    val airHumidity = 20
     val season = "зима"
-    val result = sunWeatherNow == IS_WEATHER_SUNNY && isAwningOpenNow == IS_AWNING_OPEN &&
-            airHumidityNow == FAVORABLE_AIR_HUMIDITY && season != WINTER_SEASON
+    val result = isSunWeather == IS_WEATHER_SUNNY && isAwningOpen == IS_AWNING_OPEN &&
+            airHumidity == FAVORABLE_AIR_HUMIDITY && season != WINTER_SEASON
     println("Благоприятные ли условия сейчас для роста бобовых? $result")
 }
