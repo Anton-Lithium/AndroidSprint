@@ -4,5 +4,5 @@ fun main() {
     println("Упражнения для рук:    $isEvenDay\n" +
             "Упражнения для ног:    ${!isEvenDay}\n" +
             "Упражнения для спины:  ${!isEvenDay}\n" +
-            "Упражнения для пресса: $isEvenDay ")
+            "Упражнения для пресса: $isEvenDay")
 }
