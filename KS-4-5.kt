@@ -1,17 +1,21 @@
+const val CREW_MIN = 55
+const val CREW_MAX = 70
+const val PROVISION_MIN = 50
+
 fun main() {
-    val hull = readln().toBoolean()
+    val isDamage = readln().toBoolean()
     val crew = readln().toInt()
     val provisions = readln().toInt()
-    val isStorming = readln().toBoolean()
+    val isWeatherGood = readln().toBoolean()
 
-    val isHullIntact = !hull
-    val hasEnoughCrew = crew in 55..70
-    val hasRecomendedCrew = crew == 70
-    val hasSufficientProvisions = provisions > 50
-    val isWeatherSafe = !isStorming
+    val isHullIntact = !isDamage
+    val hasEnoughCrew = crew in CREW_MIN..CREW_MAX
+    val hasRecommendedCrew = crew == CREW_MAX
+    val hasSufficientProvisions = provisions > PROVISION_MIN
+    val isWeatherSafe = isWeatherGood
 
     val canDepartLongVoyage = (isHullIntact && hasEnoughCrew && hasSufficientProvisions && isWeatherSafe)
-            || (isHullIntact || (hasRecomendedCrew && hasSufficientProvisions && isWeatherSafe))
+            || (!isHullIntact || (hasRecommendedCrew && hasSufficientProvisions && isWeatherSafe))
 
     if (canDepartLongVoyage) {
         println("Корабль готов к отплытию")
