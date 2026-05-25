@@ -3,7 +3,7 @@ const val CREW_MAX = 70
 const val PROVISION_MIN = 50
 
 fun main() {
-    val isDamage = readln().toBoolean()
+    val isDamaged = readln().toBoolean()
     val crew = readln().toInt()
     val provisions = readln().toInt()
     val isWeatherGood = readln().toBoolean()
@@ -13,8 +13,8 @@ fun main() {
     val hasSufficientProvisions = provisions > PROVISION_MIN
     val hasFiftyOrMoreProvisions = provisions >= PROVISION_MIN
 
-    val canDepartLongVoyage = (isDamage && hasEnoughCrew && hasSufficientProvisions)
-            && (!isDamage || (hasRecommendedCrew && hasFiftyOrMoreProvisions && isWeatherGood))
+    val canDepartLongVoyage = (isDamaged && hasEnoughCrew && hasSufficientProvisions)
+            || (!isDamaged || (hasRecommendedCrew && hasFiftyOrMoreProvisions && isWeatherGood))
 
     if (canDepartLongVoyage) {
         println("Корабль готов к отплытию")
