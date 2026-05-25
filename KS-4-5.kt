@@ -13,8 +13,8 @@ fun main() {
     val hasSufficientProvisions = provisions > PROVISION_MIN
     val hasFiftyOrMoreProvisions = provisions >= PROVISION_MIN
 
-    val canDepartLongVoyage = (isDamaged && hasEnoughCrew && hasSufficientProvisions)
-            || (!isDamaged || (hasRecommendedCrew && hasFiftyOrMoreProvisions && isWeatherGood))
+    val canDepartLongVoyage = (!isDamaged && hasEnoughCrew && hasSufficientProvisions)
+            || (isDamaged && hasRecommendedCrew && hasFiftyOrMoreProvisions && isWeatherGood)
 
     if (canDepartLongVoyage) {
         println("Корабль готов к отплытию")
