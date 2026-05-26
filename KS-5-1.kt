@@ -1,6 +1,6 @@
 fun main() {
-    val firstNumber = 2
-    val secondNumber = 3
+    val firstNumber = (0..10).random()
+    val secondNumber = (0..10).random()
     println("Подтвердите, что вы не робот, сложите два числа: $firstNumber + $secondNumber")
     val resultNumber = readln().toInt()
     if (resultNumber == (firstNumber + secondNumber)) {
