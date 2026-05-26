@@ -1,10 +1,11 @@
 fun main() {
-    println("Сколько будет 2 + 3")
+    val firstNumber = 2
+    val secondNumber = 3
+    println("Подтвердите, что вы не робот, сложите два числа: $firstNumber + $secondNumber")
     val resultNumber = readln().toInt()
-    if (resultNumber == 5) {
+    if (resultNumber == (firstNumber + secondNumber)) {
         println("Добро пожаловать!")
-    }
-    else {
+    } else {
         println("Доступ запрещен.")
     }
 }
