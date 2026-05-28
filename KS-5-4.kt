@@ -1,5 +1,6 @@
 const val REGISTERED_USERNAME = "Zaphod"
 const val REGISTERED_PASSWORD = "PanGalactic"
+
 fun main() {
     println("Внимание, пассажир. Моя обязанность, как обычно, незавидная" +
             ", - приветствовать вас на борту корабля \"Heart of Gold\". " +
