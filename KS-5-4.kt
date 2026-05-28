@@ -13,7 +13,6 @@ fun main() {
     val userName = readln()
     if (userName == REGISTERED_USERNAME) {
         println("Отлично! Теперь введите пароль.")
-        println("Введите пароль:")
         val userPassword = readln()
         if (userPassword == REGISTERED_PASSWORD) {
             println("Добро пожаловать!")
