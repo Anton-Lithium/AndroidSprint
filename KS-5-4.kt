@@ -1,6 +1,6 @@
+const val REGISTERED_USERNAME = "Zaphod"
+const val REGISTERED_PASSWORD = "PanGalactic"
 fun main() {
-    val captanName = "Zafod"
-    val captanPassword = "PanGalactic"
     println("Внимание, пассажир. Моя обязанность, как обычно, незавидная" +
             ", - приветствовать вас на борту корабля \"Heart of Gold\". " +
             "Вздыхает... Что ж, введи, пожалуйста, свое имя пользователя," +
@@ -10,11 +10,11 @@ fun main() {
             " Да, вперед, пожалуйста, вводите свои данные...")
     println("Введите логин:")
     val userName = readln()
-    if (captanName == userName) {
+    if (userName == REGISTERED_USERNAME) {
         println("Отлично! Теперь введите пароль.")
-        print("password:")
+        println("Введите пароль:")
         val userPassword = readln()
-        if (captanPassword == userPassword) {
+        if (userPassword == REGISTERED_PASSWORD) {
             println("Добро пожаловать!")
         } else {
             println("Пароль указан не верно!")
