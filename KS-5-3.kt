@@ -10,10 +10,12 @@ fun main() {
     val userNumber2 = readln().toInt()
     if ((currentNumber1 == userNumber1 && currentNumber2 == userNumber2) ||
         (currentNumber2 == userNumber1 && currentNumber1 == userNumber2)) {
-        println("Поздравляем! Вы выиграли главный приз!\nЗагаданные числа $currentNumber1 и $currentNumber2")
-    } else if (currentNumber1 == userNumber1 || currentNumber2 == userNumber2 ||
-        currentNumber1 == userNumber2 || currentNumber2 == userNumber1) {
-        println("Вы выиграли утешительный приз!\nЗагаданные числа $currentNumber1 и $currentNumber2")
+        println("Поздравляем! Вы выиграли главный приз!\n" +
+                "Загаданные числа $currentNumber1 и $currentNumber2")
+    } else if ((currentNumber1 == userNumber1 || currentNumber2 == userNumber2) ||
+        (currentNumber1 == userNumber2 || currentNumber2 == userNumber1)) {
+        println("Вы выиграли утешительный приз!\n" +
+                "Загаданные числа $currentNumber1 и $currentNumber2")
     } else {
         println("Неудача!\nЗагаданные числа $currentNumber1 и $currentNumber2")
     }
