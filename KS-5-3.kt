@@ -1,6 +1,6 @@
 fun main() {
-    val currentNumber1 =(0..42).random()
-    val currentNumber2 =(0..42).random()
+    val currentNumber1 = (0..42).random()
+    val currentNumber2 = (0..42).random()
     println("Добро пожаловать в лотерею!")
     println("Вам нужно угадать два числа от 0 до 42.")
     println("Если угадаете хотя бы одно — получите утешительный приз!")
